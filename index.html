@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão: Modo Batman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="botao">GOTHAM PRECISA DE VOCÊ</button>
+    <h1 id="texto">"Para superar o medo, você precisa se tornar o medo." — Bruce Wayne</h1>
+
+    <script>
+    const botao = document.getElementById("botao");
+    const texto = document.getElementById("texto");
+
+    botao.addEventListener("click", function() {
+        document.body.classList.toggle("batman");
+
+        if (document.body.classList.contains("batman")) {
+            texto.innerText = "Eu sou o Batman.";
+            botao.innerText = "RETORNAR";
+        } else {
+            texto.innerText = '"Para superar o medo, você precisa se tornar o medo." — Bruce Wayne';
+            botao.innerText = "GOTHAM PRECISA DE VOCÊ";
+        }
+    });
+    </script>
+
+</body>
+</html>
